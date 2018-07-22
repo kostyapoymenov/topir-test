@@ -1,0 +1,247 @@
+.first {
+  padding-bottom: 7%;
+}
+
+.first-content--offer {
+  grid-area: fco;
+  padding: 15.5% 31% 11% 7%;
+  background-image: url("../images/bg/offer-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  &::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: $black;
+    opacity:.5;
+    z-index: -1;
+  }
+  @include tablets {
+    padding: 15.5% 15% 11% 7%;
+  }
+}
+
+.first-content__text {
+  color: $white;
+  @include font-size(16px);
+  padding-bottom: rem(20px);
+}
+
+.first-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.first-block--art {
+  grid-area: fba;
+  background-color: $red;
+  @include phones {
+    padding: rem(40px) 0;
+  }
+}
+
+.first-block__num {
+  color: #ffffff;
+  @include font-size(85px);
+  line-height: 1;
+}
+
+.first-block__text {
+  color: #ffffff;
+  @include font-size(16px);
+}
+
+.first-block--date {
+  grid-area: fbd;
+  background-color: $blue;
+  @include phones {
+    padding: rem(40px) 0;
+  }
+}
+
+.first-content--info {
+  grid-area: fci;
+  background-color: $brown;
+  padding: 11% 30% 12% 7%;
+  @include tablets {
+    padding: 11% 10% 12% 7%;
+  }
+}
+
+.first-people {
+  grid-area: fp;
+  background-color: $green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 rem(60px) rem(35px);
+  @include tablets {
+    padding: rem(35px)  rem(20px);
+  }
+}
+
+.first-people__num {
+  color: #ffffff;
+  @include font-size(50px);
+  line-height: 1;
+  @include tablets {
+    @include font-size(35px);
+  }
+}
+
+.first-people__subtitle {
+  color: #ffffff;
+  @include font-size(14px);
+  padding-bottom: rem(25px);
+}
+
+.first-people__text {
+  color: #ffffff;
+  @include font-size(16px);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "fco fco fba fp"
+    "fbd fci fci fp";
+  @include phones {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "fco fco"
+      "fp fbd"
+      "fp fba"
+      "fci fci";
+  }
+}
+
+.slider-section {
+  display: flex;
+  padding: 7% 0;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.slider-left {
+  width:60%;
+  @include phones {
+    width:100%;
+  }
+}
+
+.carousel {
+  max-width:rem(1200px);
+  position: relative;
+}
+
+.carousel-fade {
+  animation-name: fade;
+  animation-duration: .2s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .2s;
+}
+
+@-webkit-keyframes fade {
+  from{opacity: .4}
+  to{opacity: .1}
+}
+
+@keyframes fade {
+   from{opacity: .4}
+   to{opacity: .1}
+ }
+
+.carousel {
+  padding-bottom: rem(20px);
+}
+
+.carousel-item__num {
+  color: $white;
+  position: relative;
+  padding: 0 rem(30px);
+  display: inline-block;
+  @include phones {
+    display: none;
+  }
+}
+
+.carousel-item__img {
+  width: 100%;
+}
+
+.carousel-nav {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width:auto;
+  color: $white;
+  @include font-size(24px);
+  font-weight: bold;
+  transition: all .3s ease;
+  opacity: .7;
+  &.carousel-nav--prev {
+    &:hover {
+      opacity: 1;
+    }
+    &.carousel-nav--prev--desktop {
+      left:0;
+    }
+  }
+  &.carousel-nav--next {
+    right:0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.carousel-nav--next--mob,.carousel-nav--prev--mob{
+  display: none;
+  padding: rem(15px);
+  @include phones {
+    display: block;
+  }
+}
+
+.carousel-nav--next--desktop,.carousel-nav--prev--desktop{
+  @include phones {
+    display: none;
+  }
+}
+
+.slider-right {
+  width:40%;
+  padding: 0 10% 0 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include phones {
+    width:100%;
+  }
+}
+
+.slider-right__title {
+  color: #ffffff;
+  @include font-size(16px);
+  padding-bottom: rem(10px);
+}
+
+.slider-right__name {
+  color: #ffffff;
+  @include font-size(45px);
+  line-height: 1.2;
+  @include tablets {
+    @include font-size(35px);
+  }
+}

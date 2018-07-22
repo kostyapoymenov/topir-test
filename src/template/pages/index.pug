@@ -4,3 +4,38 @@ block variables
     - var title= "Главная"
 
 block content
+    section.first
+        .grid-container
+            .first-content.first-content--offer
+                .first-content__text "Уникальное, ни на что не похожее действие, заставляющее переосмыслить привычные вещи"
+                .first-content__text KudaGo
+            .first-block.first-block--art
+                .first-block__num 30
+                .first-block__text Арт-объектов
+            .first-block.first-block--date
+                .first-block__num 7
+                .first-block__text мая
+            .first-content.first-content--info
+                .first-content__text Первый музей в России, собравший в себе множество свмостоятельных арт-объектов, выставок, инсталяций и перформансов под одной крышей.
+            .first-people
+                .first-people__num 223 457
+                .first-people__subtitle человек
+                .first-people__text Посетило данный зеркальный арт-объект к моменту открытия музея
+    section.slider-section
+        .slider-left
+            .carousel
+                .carousel-item.carousel-fade(data-text="Деньги из розетки 1")
+                    img.carousel-item__img(src="images/content/carousel/art1.jpg" alt="")
+                    .carousel-item__num 1 / 2
+                        a.carousel-nav.carousel-nav--prev.carousel-nav--prev--desktop(onclick="plusSlides(-1)") &#10094
+                        a.carousel-nav.carousel-nav--next.carousel-nav--next--desktop(onclick="plusSlides(1)") &#10095
+                .carousel-item.carousel-fade(data-text="Деньги из розетки 2")
+                    img.carousel-item__img(src="images/content/carousel/art2.jpg" alt="")
+                    .carousel-item__num 2 / 2
+                        a.carousel-nav.carousel-nav--prev.carousel-nav--prev--desktop(onclick="plusSlides(-1)") &#10094
+                        a.carousel-nav.carousel-nav--next.carousel-nav--next--desktop(onclick="plusSlides(1)") &#10095
+                a.carousel-nav.carousel-nav--prev.carousel-nav--prev--mob(onclick="plusSlides(-1)") &#10094
+                a.carousel-nav.carousel-nav--next.carousel-nav--next--mob(onclick="plusSlides(1)") &#10095
+        .slider-right
+            .slider-right__title Арт-объект
+            .slider-right__name#slideText Деньги из розетки

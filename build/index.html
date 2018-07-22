@@ -10,6 +10,64 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <header class="header container">
+        <div class="header-block__menu">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#">Музеи</a></li>
+              <li class="nav__item nav__item--drop"><a class="nav__link" href="#">Арт-объекты</a>
+                <ul class="nav-drop__list">
+                  <li class="nav-drop__item"><a class="nav-drop__link" href="#">Деньги из розетки</a></li>
+                  <li class="nav-drop__item"><a class="nav-drop__link" href="#">Ромашки</a></li>
+                  <li class="nav-drop__item"><a class="nav-drop__link" href="#">Черное и белое</a></li>
+                </ul>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#">Новости музея</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="first">
+        <div class="grid-container">
+          <div class="first-content first-content--offer">
+            <div class="first-content__text">"Уникальное, ни на что не похожее действие, заставляющее переосмыслить привычные вещи"</div>
+            <div class="first-content__text">KudaGo</div>
+          </div>
+          <div class="first-block first-block--art">
+            <div class="first-block__num">30</div>
+            <div class="first-block__text">Арт-объектов</div>
+          </div>
+          <div class="first-block first-block--date">
+            <div class="first-block__num">7</div>
+            <div class="first-block__text">мая</div>
+          </div>
+          <div class="first-content first-content--info">
+            <div class="first-content__text">Первый музей в России, собравший в себе множество свмостоятельных арт-объектов, выставок, инсталяций и перформансов под одной крышей.</div>
+          </div>
+          <div class="first-people">
+            <div class="first-people__num">223 457</div>
+            <div class="first-people__subtitle">человек</div>
+            <div class="first-people__text">Посетило данный зеркальный арт-объект к моменту открытия музея</div>
+          </div>
+        </div>
+      </section>
+      <section class="slider-section">
+        <div class="slider-left">
+          <div class="carousel">
+            <div class="carousel-item carousel-fade" data-text="Деньги из розетки 1"><img class="carousel-item__img" src="images/content/carousel/art1.jpg" alt="">
+              <div class="carousel-item__num">1 / 2<a class="carousel-nav carousel-nav--prev carousel-nav--prev--desktop" onclick="plusSlides(-1)">&#10094</a><a class="carousel-nav carousel-nav--next carousel-nav--next--desktop" onclick="plusSlides(1)">&#10095</a></div>
+            </div>
+            <div class="carousel-item carousel-fade" data-text="Деньги из розетки 2"><img class="carousel-item__img" src="images/content/carousel/art2.jpg" alt="">
+              <div class="carousel-item__num">2 / 2<a class="carousel-nav carousel-nav--prev carousel-nav--prev--desktop" onclick="plusSlides(-1)">&#10094</a><a class="carousel-nav carousel-nav--next carousel-nav--next--desktop" onclick="plusSlides(1)">&#10095</a></div>
+            </div><a class="carousel-nav carousel-nav--prev carousel-nav--prev--mob" onclick="plusSlides(-1)">&#10094</a><a class="carousel-nav carousel-nav--next carousel-nav--next--mob" onclick="plusSlides(1)">&#10095</a>
+          </div>
+        </div>
+        <div class="slider-right">
+          <div class="slider-right__title">Арт-объект</div>
+          <div class="slider-right__name" id="slideText">Деньги из розетки</div>
+        </div>
+      </section>
       <!--include section/hamburger.pug-->
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
