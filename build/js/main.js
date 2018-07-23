@@ -36,7 +36,7 @@
                 hamburgerMenu = document.querySelector('.hamburger-menu');
 
 
-        hamburgerBtn.addEventListener('click', function(){
+        hamburgerBtn.addEventListener('click', () => {
             console.log('aaaas');
             hamburgerBtn.classList.toggle('hamburger--active');
             hamburgerMenu.classList.toggle('hamburger-menu--active');
@@ -47,7 +47,7 @@
             }
         });
 
-        hamburgerMenu.addEventListener('click', function(event){
+        hamburgerMenu.addEventListener('click', (event) => {
             var target = event.target;
 
             for(var i = 0; i < hamburgerItem.length; i++){
